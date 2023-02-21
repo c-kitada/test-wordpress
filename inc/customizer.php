@@ -1,8 +1,8 @@
 <?php
 /**
- * wptest-mg Theme Customizer
+ * mg-wptest Theme Customizer
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 /**
@@ -10,7 +10,7 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function wptest_mg_customize_register( $wp_customize ) {
+function mg_wptest_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
@@ -20,26 +20,26 @@ function wptest_mg_customize_register( $wp_customize ) {
 			'blogname',
 			array(
 				'selector'        => '.site-title a',
-				'render_callback' => 'wptest_mg_customize_partial_blogname',
+				'render_callback' => 'mg_wptest_customize_partial_blogname',
 			)
 		);
 		$wp_customize->selective_refresh->add_partial(
 			'blogdescription',
 			array(
 				'selector'        => '.site-description',
-				'render_callback' => 'wptest_mg_customize_partial_blogdescription',
+				'render_callback' => 'mg_wptest_customize_partial_blogdescription',
 			)
 		);
 	}
 }
-add_action( 'customize_register', 'wptest_mg_customize_register' );
+add_action( 'customize_register', 'mg_wptest_customize_register' );
 
 /**
  * Render the site title for the selective refresh partial.
  *
  * @return void
  */
-function wptest_mg_customize_partial_blogname() {
+function mg_wptest_customize_partial_blogname() {
 	bloginfo( 'name' );
 }
 
@@ -48,14 +48,14 @@ function wptest_mg_customize_partial_blogname() {
  *
  * @return void
  */
-function wptest_mg_customize_partial_blogdescription() {
+function mg_wptest_customize_partial_blogdescription() {
 	bloginfo( 'description' );
 }
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function wptest_mg_customize_preview_js() {
-	wp_enqueue_script( 'wptest-mg-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
+function mg_wptest_customize_preview_js() {
+	wp_enqueue_script( 'mg-wptest-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), _S_VERSION, true );
 }
-add_action( 'customize_preview_init', 'wptest_mg_customize_preview_js' );
+add_action( 'customize_preview_init', 'mg_wptest_customize_preview_js' );

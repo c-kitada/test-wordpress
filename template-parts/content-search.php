@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 ?>
@@ -16,20 +16,20 @@
 		<?php if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php
-			wptest_mg_posted_on();
-			wptest_mg_posted_by();
+			mg_wptest_posted_on();
+			mg_wptest_posted_by();
 			?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php wptest_mg_post_thumbnail(); ?>
+	<?php mg_wptest_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 
 	<footer class="entry-footer">
-		<?php wptest_mg_entry_footer(); ?>
+		<?php mg_wptest_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

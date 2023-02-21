@@ -9,7 +9,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 get_header();

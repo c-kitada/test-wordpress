@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 get_header();
@@ -20,8 +20,8 @@ get_header();
 
 			the_post_navigation(
 				array(
-					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'wptest-mg' ) . '</span> <span class="nav-title">%title</span>',
-					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'wptest-mg' ) . '</span> <span class="nav-title">%title</span>',
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'mg-wptest' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'mg-wptest' ) . '</span> <span class="nav-title">%title</span>',
 				)
 			);
 

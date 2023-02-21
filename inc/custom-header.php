@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses wptest_mg_header_style()
+ * @uses mg_wptest_header_style()
  */
-function wptest_mg_custom_header_setup() {
+function mg_wptest_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'wptest_mg_custom_header_args',
+			'mg_wptest_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'wptest_mg_header_style',
+				'wp-head-callback'   => 'mg_wptest_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'wptest_mg_custom_header_setup' );
+add_action( 'after_setup_theme', 'mg_wptest_custom_header_setup' );
 
-if ( ! function_exists( 'wptest_mg_header_style' ) ) :
+if ( ! function_exists( 'mg_wptest_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see wptest_mg_custom_header_setup().
+	 * @see mg_wptest_custom_header_setup().
 	 */
-	function wptest_mg_header_style() {
+	function mg_wptest_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

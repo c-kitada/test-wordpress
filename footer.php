@@ -6,23 +6,23 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package wptest-mg
+ * @package mg-wptest
  */
 
 ?>
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wptest-mg' ) ); ?>">
+			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mg-wptest' ) ); ?>">
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'wptest-mg' ), 'WordPress' );
+				printf( esc_html__( 'Proudly powered by %s', 'mg-wptest' ), 'WordPress' );
 				?>
 			</a>
 			<span class="sep"> | </span>
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'wptest-mg' ), 'wptest-mg', '<a href="http://underscores.me/">mg</a>' );
+				printf( esc_html__( 'Theme: %1$s by %2$s.', 'mg-wptest' ), 'mg-wptest', '<a href="http://underscores.me/">mg</a>' );
 				?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
